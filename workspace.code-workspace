@@ -3,5 +3,20 @@
 		{
 			"path": "."
 		}
-	]
+	],
+	"launch": {
+		"version": "0.2.0",
+		"configurations": [
+			{
+				"type": "pwa-node",
+				"request": "launch",
+				"name": "Launch Program",
+				"skipFiles": [
+					"<node_internals>/**"
+				],
+				"program": "c:\\Training\\01 FizzBuzz\\FizzBuzz.js",
+				"__workspaceFolder": "c:\\Training\\01 FizzBuzz"
+			}
+		]
+	}
 }

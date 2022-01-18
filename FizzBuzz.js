@@ -1,11 +1,19 @@
 for (i=1; i<=100; i++) {
-        if (i % 3 === 0 && i % 5 === 0) {
-            console.log("FizzBuzz");
-        } else if (i % 5 ===0) {
-            console.log("Buzz");
-        } else if (i % 3 === 0) {
-            console.log("Fizz");
-        } else {
-            console.log(i);
-        }
+function isDivisbleBy(n,divisor) {
+    return n % divisor === 0;
 }
+let result = "";
+        if (isDivisbleBy(i,3)) {
+            result += "Fizz";
+        };
+        if (isDivisbleBy(i,5)) {
+            result += "Buzz";
+        };
+        if (isDivisbleBy(i,7)) {
+            result += "Bang";
+        };
+        if (result === "") {
+            result = i;
+        };
+            console.log(result);
+    }
