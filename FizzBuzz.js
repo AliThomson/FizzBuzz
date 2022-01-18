@@ -12,6 +12,9 @@ let result = "";
         if (isDivisbleBy(i,7)) {
             result += "Bang";
         };
+        if (isDivisbleBy(i,11)) {
+            result = "Bong";
+        };
         if (result === "") {
             result = i;
         };
