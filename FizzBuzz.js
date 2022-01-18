@@ -2,31 +2,38 @@ function isDivisbleBy(n,divisor) {
     return n % divisor === 0;
 }
 
-for (i=1; i<=200; i++) {
+for (i=1; i<=260; i++) {
     
-    let result = "";
+    let arrResult = [];
     let fezzResult = "";
-
+            
     if (isDivisbleBy(i,3)) {
-        result = "Fizz";
+        arrResult = ["Fizz"];
     };
     if (isDivisbleBy(i,13)) {
-        result += "Fezz";
+        arrResult.push("Fezz");
         fezzResult = "Fezz";
     };
     
     if (isDivisbleBy(i,5)) {
-        result += "Buzz";
+        arrResult.push("Buzz");
     };
     if (isDivisbleBy(i,7)) {
-        result += "Bang";
+        arrResult.push("Bang");
     };
+    /*Bong should be only result unless Fezz is present*/
     if (isDivisbleBy(i,11)) {
-        result = fezzResult + "Bong";
+        arrResult = [fezzResult + "Bong"];
+    };
+
+    if (isDivisbleBy(i,17)) {
+        arrResult = arrResult.reverse();
     };
     
-    if (result === "") {
-        result = i;
+    if (arrResult.length === 0) {
+        arrResult = [i];
     };
-        console.log(result);
-    }
+    let strResult = arrResult.toString();
+    strResult = strResult.replace(/,/g, '');
+    console.log(strResult);
+}
